@@ -150,32 +150,48 @@
             </section>
             <!-- slider html start -->
             <!-- Home search field html start -->
+          <div>
+           
             <div class="trip-search-section shape-search-section">
-               <div class="slider-shape"></div>
-               <div class="container">
-                  <div class="trip-search-inner white-bg d-flex">
-                     <div class="input-group">
-                        <label> Search Destination </label>
-                        <input type="text" name="s" placeholder="Enter Destination">
-                     </div>
-                     
-                     <div class="input-group width-col-3">
-                        <label> Checkin Date</label>
-                        <i class="far fa-calendar"></i>
-                        <input class="input-date-picker" type="text" name="s" placeholder="MM / DD / YY" autocomplete="off" readonly="readonly">
-                     </div>
-                     <div class="input-group width-col-3">
-                        <label> Checkout Date </label>
-                        <i class="far fa-calendar"></i>
-                        <input class="input-date-picker" type="text" name="s" placeholder="MM / DD / YY" autocomplete="off" readonly="readonly">
-                     </div>
-                     <div class="input-group width-col-3">
-                        <label class="screen-reader-text"> Search </label>
-                        <input type="submit" name="travel-search" value="INQUIRE NOW">
-                     </div>
-                  </div>
-               </div>
+                <div class="slider-shape"></div>
+                <div class="container">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="0ee0bcf9-2529-4785-88b2-7b47b175205a">
+
+
+                        <div class="trip-search-inner white-bg d-flex">
+                            <div class="input-group">
+                                <label for="contact">Email/Phone</label>
+                                <input type="text" id="destination" name="destination" placeholder="Enter Email/Phone" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="destination">Search Destination</label>
+                                <input type="text" id="destination" name="destination" placeholder="Enter Destination" required>
+                            </div>
+            
+                            <div class="input-group width-col-3">
+                                <label for="checkin_date">Checkin Date</label>
+                                <i class="far fa-calendar"></i>
+                                <input class="input-date-picker" type="text" id="checkin_date" name="checkin_date" placeholder="MM / DD / YY" autocomplete="off" readonly="readonly" required>
+                            </div>
+            
+                            <div class="input-group width-col-3">
+                                <label for="checkout_date">Checkout Date</label>
+                                <i class="far fa-calendar"></i>
+                                <input class="input-date-picker" type="text" id="checkout_date" name="checkout_date" placeholder="MM / DD / YY" autocomplete="off" readonly="readonly" required>
+                            </div>
+            
+                            <div class="input-group width-col-3">
+                                <label class="screen-reader-text" for="submit_button">Search</label>
+                                <input type="submit" id="submit_button" name="submit_button" value="INQUIRE NOW">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+            
+            
+          </div>
             <!-- search search field html end -->
           
             <!-- Home packages section html start -->
